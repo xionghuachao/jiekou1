@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="get">
+    <!--获取登陆接口case-->
+    <select id="const" parameterType="Integer" resultType="get.User">
+        select * from conste;
+
+    </select>
+    <select id="se" parameterType="Integer" resultType="get.User">
+        select * from se;
+
+    </select>
+
+
+</mapper>

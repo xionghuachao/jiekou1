@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+    
+    <test name="输入正确数据，属相成功配对1">
+        <!--<groups>
+            <run>
+                <include name="success"></include>
+            </run>
+        </groups>-->
+        <classes>
+            <class name="post.PostApi" >
+                <methods>
+                    <include name="testPostMethod"></include>
+                  
+
+                    <!--跳过不执行--><exclude name="1"></exclude>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<listeners>
+    <listener class-name="config.ExtentTestNGIReporterListener"></listener>
+</listeners>
+
+</suite> <!-- Suite -->

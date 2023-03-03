@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+    
+    <test name="输入正确数据，属相成功配对1">
+        <!--<groups>
+            <run>
+                <include name="success"></include>
+            </run>
+        </groups>-->
+        <classes>
+            <class name="get.GetCanShuJuKu" >
+                <methods>
+                    <include name="xingzuopeiduiSuccess"></include>
+                  
+
+                    <!--跳过不执行--><exclude name="1"></exclude>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="输入错误数据，无法查询2">
+        <!--<groups>
+            <run>
+                <include name="success"></include>
+            </run>
+        </groups>-->
+        <classes>
+            <class name="get.GetCanShuJuKu" >
+                <methods>
+                  
+                    <include name="teshuzifu" ></include>
+
+                    <!--跳过不执行-->
+                    <exclude name="1"></exclude>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="属相配对成功3">
+        <classes>
+            <class name="get.GetCan" >
+
+                <methods>
+                    <exclude name="1"></exclude>
+                    <include name="xingzuopeiduiSuccess" ></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="属相配对成功4">
+        <classes>
+            <class name="post.GetCanWaibu" >
+
+                <methods>
+                    <exclude name="1"></exclude>
+                    <include name="xingzuopeiduiSuccess" ></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="women参数为空，发送请求5">
+        <classes>
+            <class name="post.GetCanWaibu" >
+
+                <methods>
+                    <exclude name="1"></exclude>
+                    <include name="womannull" ></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<listeners>
+    <listener class-name="config.ExtentTestNGIReporterListener"></listener>
+</listeners>
+
+</suite> <!-- Suite -->
